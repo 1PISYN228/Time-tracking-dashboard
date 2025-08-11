@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
+    <title>Frontend Mentor | Time tracking dashboard</title>
+    <link href="./output.css" rel="stylesheet">
+    <link rel="stylesheet" href="../font/fonts.css">
+    <script src="../src/main.js" defer></script>
+</head>
+<body>
+    <main class="rubik bg-[hsl(226,43%,10%)]">
+        <section class="grid xl:grid-cols-4 md:grid-cols-2 gap-y-10 lg:gap-x-10 xl:gap-x-5 2xl:gap-x-0 pt-40 md:px-6 lg:px-24 xl:px-5 2xl:px-10 pb-96 text-white xl:justify-items-center">
+            <article class="justify-items-center md:col-span-2 xl:col-span-1 xl:row-span-2 grid">
+                <article class="bg-[hsl(235,46%,20%)] md:w-full w-[350px] xl:w-[310px] 2xl:w-[350px] rounded-3xl">
+                    <div class="bg-[hsl(246,80%,60%)] px-8 py-10 xl:pt-10 xl:pb-14 flex md:pl-28 lg:pl-36 xl:px-8 xl:grid gap-5 rounded-2xl">
+                        <img src="../images/image-jeremy.png" alt="Jeremy" class="w-[5vw] h-[60px] xl:h-auto min-w-[60px] max-w-full border-3 border-white rounded-full">
+                        <div class="flex flex-col">
+                            <span class="text-[clamp(1rem,1.1vw,10rem)] font-light text-[hsl(236,100%,87%)]">Report for</span>
+                            <p class="text-[clamp(1.8rem,2.7vw,12rem)] leading-none xl:leading-12 2xl:leading-16 font-light">Jeremy<br class="hidden xl:block">
+                                Robson</p>
+                        </div>
+                    </div>
+                    <div class="xl:px-10 xl:pt-10 py-5">
+                        <ul class="xl:grid flex xl:justify-start justify-evenly gap-4 text-[clamp(1.2rem,1.2vw,10rem)] font-light">
+                            <li>
+                                <button class="cursor-pointer text-[hsl(235,45%,61%)] hover:text-white duration-300 ease-in-out" data-js-button-daily="daily">Daily</button>
+                            </li>
+                            <li>
+                                <button class="cursor-pointer text-white hover:text-white duration-300 ease-in-out" data-js-button-weekly="weekly">Weekly</button>
+                            </li>
+                            <li>
+                                <button class="cursor-pointer text-[hsl(235,45%,61%)] hover:text-white duration-300 ease-in-out" data-js-button-monthly="monthly">Monthly</button>
+                            </li>
+                        </ul>
+                    </div>
+                </article>
+            </article>
+            <!-- 1 -->
+            <article class="justify-items-center md:justify-items-start">
+                <article class="bg-[hsl(15,100%,70%)] rounded-3xl w-[350px] lg:w-full xl:w-[310px] 2xl:w-[350px]">
+                    <div class="flex justify-end pr-6 h-11 relative overflow-hidden">
+                        <img src="../images/icon-work.svg" alt="icon-work" class="absolute top-[-9px]">
+                    </div>
+                    <div class="grid gap-2 xl:gap-6 bg-[hsl(235,46%,20%)] px-8 py-5 xl:p-8 rounded-2xl hover:brightness-140 duration-300 ease-in-out blocks" data-js-blocks>
+                        <div class="flex justify-between items-center">
+                            <h1 class="text-[clamp(1.2rem,1.1vw,10rem)]">Work</h1>
+                            <button class="cursor-pointer">
+                                <img src="../images/icon-ellipsis.svg" alt="icon-ellipsis" class="duration-300 ease-in-out" data-js-button-points>
+                            </button>
+                        </div>
+                        <div class="xl:grid flex items-center justify-between xl:gap-1" data-js-activity="Work">
+                            <span class="text-[clamp(2.2rem,3.1vw,12rem)] font-light current">
+                                
+                            </span>
+                            <p class="text-[clamp(1rem,1vw,10rem)] font-light text-[hsl(236,100%,87%)]">
+                                Last week - <span class="previous"></span>
+                            </p>
+                        </div>
+                    </div>
+                </article>
+            </article>
+            <!-- 2 -->
+            <article class="justify-items-center md:justify-items-end">
+                <article class="bg-[hsl(195,74%,62%)] rounded-3xl w-[350px] lg:w-full xl:w-[310px] 2xl:w-[350px]">
+                    <div class="flex justify-end pr-6 h-11 relative overflow-hidden">
+                        <img src="../images/icon-play.svg" alt="icon-play" class="absolute top-[-7px]">
+                    </div>
+                    <div class="grid gap-2 xl:gap-6 bg-[hsl(235,46%,20%)] px-8 py-5 xl:p-8 rounded-2xl hover:brightness-140 duration-300 ease-in-out" data-js-blocks>
+                        <div class="flex justify-between items-center">
+                            <h1 class="text-[clamp(1.2rem,1.1vw,10rem)]">Play</h1>
+                            <button class="cursor-pointer">
+                                <img src="../images/icon-ellipsis.svg" alt="icon-ellipsis" class="duration-300 ease-in-out" data-js-button-points>
+                            </button>
+                        </div>
+                        <div class="xl:grid flex justify-between items-center xl:gap-1" data-js-activity="Play">
+                            <span class="text-[clamp(2.2rem,3.1vw,12rem)] font-light current">
+                                
+                            </span>
+                            <p class="text-[clamp(1rem,1vw,10rem)] font-light text-[hsl(236,100%,87%)]">
+                                Last week - <span class="previous"></span>
+                            </p>
+                        </div>
+                    </div>
+                </article>
+            </article>
+            <!-- 3 -->
+            <article class="justify-items-center md:justify-items-start">
+                <article class="bg-[hsl(348,100%,68%)] rounded-3xl w-[350px] lg:w-full xl:w-[310px] 2xl:w-[350px]">
+                    <div class="flex justify-end pr-6 h-11 relative overflow-hidden">
+                        <img src="../images/icon-study.svg" alt="icon-study" class="absolute top-[-7px]">
+                    </div>
+                    <div class="grid gap-2 xl:gap-6 bg-[hsl(235,46%,20%)] px-8 py-5 xl:p-8 rounded-2xl hover:brightness-140 duration-300 ease-in-out" data-js-blocks>
+                        <div class="flex justify-between items-center">
+                            <h1 class="text-[clamp(1.2rem,1.1vw,10rem)]">Study</h1>
+                            <button class="cursor-pointer">
+                                <img src="../images/icon-ellipsis.svg" alt="icon-ellipsis" class="duration-300 ease-in-out" data-js-button-points>
+                            </button>
+                        </div>
+                        <div class="xl:grid flex justify-between items-center xl:gap-1" data-js-activity="Study">
+                            <span class="text-[clamp(2.2rem,3.1vw,12rem)] font-light current">
+                                
+                            </span>
+                            <p class="text-[clamp(1rem,1vw,10rem)] font-light text-[hsl(236,100%,87%)]">
+                                Last week - <span class="previous"></span>
+                            </p>
+                        </div>
+                    </div>
+            </article>
+            </article>
+            <!-- 4 -->
+            <article class="justify-items-center md:justify-items-end">
+                <article class="bg-[hsl(145,58%,55%)] rounded-3xl w-[350px] lg:w-full xl:w-[310px] 2xl:w-[350px]">
+                    <div class="flex justify-end pr-6 h-11 relative overflow-hidden">
+                        <img src="../images/icon-exercise.svg" alt="icon-exercise" class="absolute top-[-2px]">
+                    </div>
+                    <div class="grid gap-2 xl:gap-6 bg-[hsl(235,46%,20%)] px-8 py-5 xl:p-8 rounded-2xl hover:brightness-140 duration-300 ease-in-out" data-js-blocks>
+                        <div class="flex justify-between items-center">
+                            <h1 class="text-[clamp(1.2rem,1.1vw,10rem)]">Exercise</h1>
+                            <button class="cursor-pointer">
+                                <img src="../images/icon-ellipsis.svg" alt="icon-ellipsis" class="duration-300 ease-in-out" data-js-button-points>
+                            </button>
+                        </div>
+                        <div class="xl:grid flex justify-between items-center xl:gap-1" data-js-activity="Exercise">
+                            <span class="text-[clamp(2.2rem,3.1vw,12rem)] font-light current">
+                                
+                            </span>
+                            <p class="text-[clamp(1rem,1vw,10rem)] font-light text-[hsl(236,100%,87%)]">
+                                Last week - <span class="previous"></span>
+                            </p>
+                        </div>
+                    </div>
+                </article>
+            </article>
+            <!-- 5 -->
+            <article class="justify-items-center md:justify-items-start">
+                <article class="bg-[hsl(264,64%,52%)] rounded-3xl w-[350px] lg:w-full xl:w-[310px] 2xl:w-[350px]">
+                    <div class="flex justify-end pr-6 h-11 relative overflow-hidden">
+                        <img src="../images/icon-social.svg" alt="icon-social" class="absolute top-[-15px]">
+                    </div>
+                    <div class="grid gap-2 xl:gap-6 bg-[hsl(235,46%,20%)] px-8 py-5 xl:p-8 rounded-2xl hover:brightness-140 duration-300 ease-in-out" data-js-blocks>
+                        <div class="flex justify-between items-center">
+                            <h1 class="text-[clamp(1.2rem,1.1vw,10rem)]">Social</h1>
+                            <button class="cursor-pointer">
+                                <img src="../images/icon-ellipsis.svg" alt="icon-ellipsis" class="duration-300 ease-in-out" data-js-button-points>
+                            </button>
+                        </div>
+                        <div class="xl:grid flex justify-between items-center xl:gap-1" data-js-activity="Social">
+                            <span class="text-[clamp(2.2rem,3.1vw,12rem)] font-light current">
+                                
+                            </span>
+                            <p class="text-[clamp(1rem,1vw,10rem)] font-light text-[hsl(236,100%,87%)]">
+                                Last week - <span class="previous"></span>
+                            </p>
+                        </div>
+                    </div>
+                </article>
+            </article>
+            <!-- 6 -->
+            <article class="justify-items-center md:justify-items-end">
+                <article class="bg-[hsl(43,84%,65%)] rounded-3xl w-[350px] lg:w-full xl:w-[310px] 2xl:w-[350px]">
+                    <div class="flex justify-end pr-6 h-11 relative overflow-hidden">
+                        <img src="../images/icon-self-care.svg" alt="icon-self-care" class="absolute top-[-13px]">
+                    </div>
+                    <div class="grid gap-2 xl:gap-6 bg-[hsl(235,46%,20%)] px-8 py-5 xl:p-8 rounded-2xl hover:brightness-140 duration-300 ease-in-out blocks" data-js-blocks>
+                        <div class="flex justify-between items-center">
+                            <h1 class="text-[clamp(1.2rem,1.1vw,10rem)]">Self Care</h1>
+                            <button class="cursor-pointer">
+                                <img src="../images/icon-ellipsis.svg" alt="icon-ellipsis" class="duration-300 ease-in-out" data-js-button-points>
+                            </button>
+                        </div>
+                        <div class="xl:grid flex justify-between items-center xl:gap-1" data-js-activity="Self Care">
+                            <span class="text-[clamp(2.2rem,3.1vw,12rem)] font-light current">
+                                
+                            </span>
+                            <p class="text-[clamp(1rem,1vw,10rem)] font-light text-[hsl(236,100%,87%)]">
+                                Last week - <span class="previous"></span>
+                            </p>
+                        </div>
+                    </div>
+                </article>
+            </article>
+            <!-- 7 -->
+        </section>
+    </main>
+</body>
+</html>
