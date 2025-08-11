@@ -62,7 +62,7 @@ let activityData = []
 
 
 
-fetch("../data.json").then((response) => {
+fetch("http://localhost:5500/data.json").then((response) => {
     if (!response.ok) {
         const messageError = "Something went wrong!"
         throw new Error(messageError)
